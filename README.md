@@ -18,7 +18,8 @@ A few reasons:
 * bash Linux terminal
 * HTML
 * md
-* CSS (note my reset CSS file is code from Erik Meyer just for older browsers, edited by me)
+* CSS  
+* Erik Myer's CSS reset.css code
 * JavaScript
 * GitHub
 * Stackoverflow
