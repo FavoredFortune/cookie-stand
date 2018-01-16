@@ -19,13 +19,23 @@ img {
 h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
+    color: coral;
 }
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+    color: coral;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: coral;
 }
 .center{
-    text-align: center
+    text-align: center;
+    color: whitesmoke;
+    font-size: 33px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
@@ -35,7 +45,7 @@ h2 {
 body {
     background-color: bisque;
     color: grey;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Georgia', serif;
     font-size: 14px;
     line-height: 1;
     margin: 0px;
@@ -58,6 +68,10 @@ ol.li {
     list-style: decimal;
 
   }
+.sales {
+    font-family: 'Arial', sans-serif;
+
+}
 section.footer {
     background-color: gray;
     border: 2px bisque;
