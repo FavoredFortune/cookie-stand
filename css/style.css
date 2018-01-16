@@ -1,0 +1,83 @@
+nav {
+    background-color: gray;
+    border: 2px bisque;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    top: align-self, auto;      
+}
+section {
+    line-height: 1;
+
+}
+img {
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border: 2px grey;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: coral;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: coral;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: coral;
+}
+.center{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 33px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+    display: inline;
+}
+  
+body {
+    background-color: bisque;
+    color: grey;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0px;
+    padding: 5px;
+    border: 0px;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+ul.li {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    list-style: square, inside;
+    text-indent: 10%;
+
+  }
+ol.li {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    list-style: decimal;
+
+  }
+.sales {
+    font-family: 'Arial', sans-serif;
+
+}
+section.footer {
+    background-color: gray;
+    border: 2px bisque;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+}
+
