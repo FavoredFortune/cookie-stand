@@ -65,8 +65,8 @@ body {
 ul li {
     font-size: .5rem;
     line-height: 1.5;
-    list-style-type: circle;
-    text-indent: 10%;
+    list-style-type: square;
+    text-indent: 4px;
     color: grey;
 
   }
