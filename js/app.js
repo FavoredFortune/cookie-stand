@@ -203,7 +203,6 @@ function StoreCookieSales (minCust, maxCust, avgCookies) {
 //   },
 // };
 
-
 var onePike = new StoreCookieSales (23,65,6.3);
 
 var seaTacAir = new StoreCookieSales (3,24,1.2);
