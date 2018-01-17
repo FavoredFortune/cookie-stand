@@ -1,92 +1,92 @@
 nav {
-    background-color: gray;
-    border: 2px bisque;
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 14px;     
+  background-color: gray;
+  border: 2px bisque;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;     
 }
 
 nav.li {
-    margin: 14px;
-    padding: 14px;
-    text-align: center;
-    display: inline;
+  margin: 14px;
+  padding: 14px;
+  text-align: center;
+  display: inline;
 }
 
 section {
-    line-height: 1;
+  line-height: 1;
 
 }
 img {
-    width: 150px;
-    margin: 10px;
-    padding: 5px;
-    border: 2px grey;
+  width: 150px;
+  margin: 10px;
+  padding: 5px;
+  border: 2px grey;
 }
 h1{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    color: coral;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: coral;
 }
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: coral;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: coral;
 }
 h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: coral;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: coral;
 }
 .center{
-    text-align: center;
-    color: whitesmoke;
-    font-size: 33px;
-    font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 33px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
-    display: inline;
+  display: inline;
 }
   
 body {
-    background-color: bisque;
-    color: grey;
-    font-family: 'Georgia', serif;
-    font-size: 14px;
-    line-height: 1;
-    margin: 5px;
-    padding: 5px;
-    border: 5px;
-    font-size: 100%;
-    vertical-align: middle;
+  background-color: bisque;
+  color: grey;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  line-height: 1;
+  margin: 5px;
+  padding: 5px;
+  border: 5px;
+  font-size: 100%;
+  vertical-align: middle;
 }
 
 ul li {
-    font-size: .5rem;
-    line-height: 1.5;
-    list-style-type: square;
-    text-indent: 4px;
-    color: grey;
+  font-size: .5rem;
+  line-height: 1.5;
+  list-style-type: square;
+  text-indent: 8px;
+  color: grey;
 
   }
 ol li {
-    font-size: .5rem;
-    line-height: 1.5;
-    list-style: georgian;
-    color: grey;
+  font-size: .5rem;
+  line-height: 1.5;
+  list-style: georgian;
+  color: grey;
 
   }
 .sales {
-    font-family: 'Arial', sans-serif;
-
+  font-family: 'Arial', sans-serif;
 }
+
 section.footer {
-    background-color: gray;
-    border: 2px bisque;
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 14px;
-    padding: 10px;
+  background-color: gray;
+  border: 2px bisque;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  padding: 10px;
 }
 
