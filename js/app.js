@@ -25,7 +25,7 @@ id="alki" */
 //PSEUDO CODE
 //Global variables that are potentially used/change: store hours (assuming all stores have same hours for now), store locations
 //Local variables that are store-dependent:  total cookies, cookies per hour, total sales, average # of customers, average # customers per hour, average cookies per hour, average cookies per customer per hour
-//Which variables need to be methods?  average customers, average customers per hour, average cookies per hour,average cookies per customer per hour 
+//Which variables need to be methods?  average customers, average customers per hour, average cookies per hour,average cookies per customer per hour
 
 //BRING OVER NUMBERS FROM SUPPORT MD
 // Location        | Min / Cust | Max / Cust | Avg Cookie / Sale
@@ -37,69 +37,59 @@ id="alki" */
 // Alki            |      2     |     16     |        4.6
 
 var storeLocations = ['1st and Pike', 'Seatac Airport', 'Seattle Center', 'Capitol Hill', 'Alki'];
-var storeHours = ['6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 pm','3 pm','4 pm','5 pm','6 pm','7 pm','8 pm'];
+var storeHours = ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ','Total: '];
 
 var onePike = {
-    minCust: 23
-    maxCust: 65 
-    avgCookies: 6.3
-    totalCookies: //method 
-     
-    // randomHourlyCustomers: function (){
-    //     return Math.round (Math.random ()* (this.maxCust - this.minCust)+1 + this.minCust)
-    //      returns customers;
-    // } 
+  minCust: 23,
+  maxCust: 65,
+  avgCookies: 6.3,
+  //Calculate the random number of customers per hour that is no less than the min and no greater than the max
+  numHourlyCust: function(){
+    return Math.round (Math.random () * (this.maxCust - this.minCust) + this.minCust);
+  },
+  //Calculate and store the simulated amounts of cookies purchased for each hour at a location AND the total
+  // average cookies * customer number = # cookies per hour
+  cookieSales: [],
 
-    // cookiesPHour: // method and push?[16, 20, 35, 48, 56, 77, 93, 144, 119, 84, 63, 23, 42, 27, 59],
-    // function (){
-    //     Math.round(this.avgCookies*this.randomHourlyCustomers);
-    //     return cookies + ' cookies';
-    // }
-    // cookieSales: function(){
-        // var sales[];
-        // var total
-        // for//
-            //if (can console log)
-            //else sales.push (onePike.cookiesPerHour ()); OR toatl += parseInt(sales[i]) (can console log)
-        //return sales;
-        //console log sales to see array
+  cookieSalesPH: function () {
+    var totalCookieSales = 0;
 
-    //render // to push content into html doc
-
-    //Calculate and store the simulated amounts of cookies purchased for each hour at each location
-    // var avgCookiesSoldPerHour = totalSales/storeHours.length
-    //                           = 657/18 = 36.5 average cookies per hour
-    //Calculate the average number of customers per hour
-    // var customerPerHour = return: Math.round (Math.random (mixCust, maxCust))/storeHours.length;
-    //                     = 15 customers per hour (total guess within the min/max)
-    //Calculate average cookies per customer sold per hour   
-    //  var avgCPPC = averageCookiesSoldPerHour/customerPerHour
-    //
-
-    render: function () {
-        // access the ul from sales.html
-        var ulEl = document.getElementById('onepike');
-
-        for(var i = 0; i < storeHours.length; i++) {
-        // 1. create list items
-        var liEl = document.createElement('li');
-        // 2. give them content
-
-        liEl.textContent = storeLocations [i] + ': Has ' + 'a minimum of ' + this.minCust + ' customers per hour and a maximum of ' + this.maxCust + ' customers per hour. It is estimated that this store will sell an average of ' + this.avgCPC + ' cookies per customer. ';
-        // 3. append the li to the ul
-        // parentElement.appendChild(childElement);
-        ulEl.appendChild(liEl);
-        // message: 'This store has an average sale of  ' + avgCPC + ' cookies per customer.';
-   
+    for (var i = 0; i < storeHours.length; i ++) {
+      if (i < storeHours.length - 1){
+        var cookieSalesPerHour = Math.round (this.avgCookies * this.numHourlyCust());
+        this.cookieSales.push (cookieSalesPerHour);
+        console.log (storeHours [i], cookieSalesPerHour + ' cookies');
+        totalCookieSales += cookieSalesPerHour;
+      }
+      else {
+        this.cookieSales.push(totalCookieSales);
+      }
     }
-  }
-       
-    };
+  },
+  render: function () {
+    this.cookieSalesPH ();
+    // access the ul from sales.html
+    var ulEl = document.getElementById('onePike');
 
-}
+    for(var i = 0; i < storeHours.length; i++) {
+      // 1. create list items
+      var liEl = document.createElement('li');
+      // 2. give them content
 
+      liEl.textContent = storeHours[i] + this.cookieSales[i] + ' cookies';
+
+      // 3. append the li to the ul
+      // parentElement.appendChild(childElement);
+      ulEl.appendChild(liEl);
+
+    }
+  },
+
+};
+console.log (onePike);
 onePike.render();
-seaTacAir.render ();
-seaCenter.render ();
-capHill.render();
-alki.render();
+console.log (seaTacAir);
+// seaTacAir.render ();
+// seaCenter.render ();
+// capHill.render();
+// alki.render();
