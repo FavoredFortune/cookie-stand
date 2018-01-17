@@ -54,6 +54,93 @@ function StoreCookieSales (minCust, maxCust, avgCookies) {
         this.cookieSales.push (this.cookieSalesPH);
         console.log (storeHours [i], this.cookieSalesPH + ' cookies');
         totalCookieSales += this.cookieSalesPerHour;
+
+        var cookieSalesPerHour = Math.round (this.avgCookies * this.numHourlyCust());
+        this.cookieSales.push (cookieSalesPerHour);
+        console.log (storeHours [i], cookieSalesPerHour + ' cookies');
+        totalCookieSales += cookieSalesPerHour;
+      }
+      else {
+        this.cookieSales.push(totalCookieSales);
+      }
+    }
+  },
+
+  render: function () {
+    this.cookieSalesPH ();
+    // access the ul from sales.html
+    var ulEl = document.getElementById('onePike');
+
+    for(var i = 0; i < storeHours.length; i++) {
+      // 1. create list items
+      var liEl = document.createElement('li');
+      // 2. give them content
+
+      liEl.textContent = storeHours[i] + this.cookieSales[i] + ' cookies';
+
+      // 3. append the li to the ul
+      // parentElement.appendChild(childElement);
+      ulEl.appendChild(liEl);
+
+    }
+  },
+};
+
+var seaTacAir = {
+  minCust: 3,
+  maxCust:24,
+  avgCookies: 1.2,
+  numHourlyCust: function(){
+    return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+  cookieSales: [],
+  cookieSalesPerHour: function() {
+    var totalCookieSales = 0;
+
+    for (var i = 0; i < storeHours.length; i ++){
+      if (i < storeHours.length - 1){
+        var cookieSalesPerHour = Math.round(this.avgCookies * this.numHourlyCust());
+        this.cookieSales.push (cookieSalesPerHour);
+        console.log (storeHours[i], cookieSalesPerHour, 'cookies');
+        totalCookieSales += cookieSalesPerHour;
+      }
+      else {
+        this.cookieSales.push(totalCookieSales);
+      }
+    }
+  },
+  render: function() {
+    this.cookieSalesPerHour();
+    var ulEl = document.getElementById('seaTacAir');
+
+    for (var i = 0; i < storeHours.length; i++){
+      var liEl = document.createElement('li');
+      liEl.textContent = storeHours[i] + this.cookieSales[i] + ' cookies';
+      ulEl.appendChild (liEl);
+    }
+  },
+};
+
+var seaCenter = {
+  minCust: 11,
+  maxCust:38,
+  avgCookies: 3.7,
+
+  numHourlyCust: function(){
+    return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+
+  cookieSales: [],
+
+  cookieSalesPerHour: function() {
+    var totalCookieSales = 0;
+
+    for (var i = 0; i < storeHours.length; i ++){
+      if (i < storeHours.length - 1){
+        var cookieSalesPerHour = Math.round(this.avgCookies * this.numHourlyCust());
+        this.cookieSales.push (cookieSalesPerHour);
+        console.log (storeHours[i], cookieSalesPerHour, 'cookies');
+        totalCookieSales += cookieSalesPerHour;
       }
       else {
         this.cookieSales.push(totalCookieSales);
@@ -212,6 +299,8 @@ var seaCenter = new StoreCookieSales (11,38,1.2);
 var capHill = new StoreCookieSales (3,24,1.2);
 
 var alki = new StoreCookieSales (3,24,1.2);
+
+  },
 
 console.log (onePike);
 // onePike.render();
