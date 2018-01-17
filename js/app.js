@@ -123,9 +123,9 @@ var seaTacAir = {
 };
 
 var seaCenter = {
-  minCust: 3,
-  maxCust:24,
-  avgCookies: 1.2,
+  minCust: 11,
+  maxCust:38,
+  avgCookies: 3.7,
 
   numHourlyCust: function(){
     return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
@@ -161,9 +161,9 @@ var seaCenter = {
 };
 
 var capHill = {
-  minCust: 3,
-  maxCust:24,
-  avgCookies: 1.2,
+  minCust: 20,
+  maxCust:38,
+  avgCookies: 2.3,
 
   numHourlyCust: function(){
     return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
@@ -199,9 +199,9 @@ var capHill = {
 };
 
 var alki = {
-  minCust: 3,
-  maxCust:24,
-  avgCookies: 1.2,
+  minCust: 2,
+  maxCust:16,
+  avgCookies: 4.6,
 
   numHourlyCust: function(){
     return Math.round(Math.random() * (this.maxCust - this.minCust) + this.minCust);
