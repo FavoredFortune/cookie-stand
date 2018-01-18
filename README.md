@@ -8,6 +8,7 @@ Code Fellows 201 Week 2 Project
 A few reasons:
 * Learn more about planning and defining a problem domain
 * Learn more about DOM, object literals and constructor functions
+* Better understand how to code events and forms
 * Help me practice a variety of basic web page development skills in CSS and HTML
 * Help me practice JavaScript coding 
 * It combines the three initial languages I'm learning as a developer: CSS, HTML, JavaScript

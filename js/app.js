@@ -115,6 +115,7 @@ function makeFooterRow () {
 
   for (var i = 0; i < storeHours.length; i++){
     var totalHourlyCookies = 0;
+    totalHourlyCookies += this.cookieSalesPH[i];
 
     for(var j in StoreCookieSales.allStores){
       totalHourlyCookies += StoreCookieSales.allStores[j].cookieSalesPH[i];
