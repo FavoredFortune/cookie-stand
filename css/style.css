@@ -64,30 +64,35 @@ body {
 
 table {
   empty-cells: hide;
-  border: 2px solid slategray;
   font-family: 'Montserrat', sans-serif;
-  margin: 20px;
-  padding: 25px;
-  background-color: white;
-  max-width: 100%
+  max-width: 100%;
+  border-collapse: separate;
+
 }
 
 td,tr {
   padding: 15px;
   margin: 10px;
-	border-radius: 5px;
-  border: 2px solid slategray;
+  border: .1px solid slategray;
+}
+tr{
   background: white;
-  empty-cells: hide;
+}
+table tr:nth-child(even) {
+  background: bisque;
+}
+tr td:first-child{
+  background: white;
+  color: coral;
 }
 
 th {
 	background-color: white;
   color: coral;
-  border: 2px solid slategray;
+  border: 1px solid slategray;
   padding: 10px;
   margin: 5px;
-  empty-cells: hide;
+  /* empty-cells: hide; */
 }
 ul li {
   font-size: .5rem;

@@ -65,7 +65,7 @@ StoreCookieSales.prototype.cookieSalesPH = function() {
 
 function makeHeaderRow (){
   var trEl = document.createElement('tr');
-  var tdEl = document.createElement ('td');
+  var tdEl = document.createElement ('th');
   trEl.appendChild(tdEl);
   for (var i = 0; i < storeHours.length; i++){
     var thEl = document.createElement('th');
@@ -80,7 +80,7 @@ StoreCookieSales.prototype.render = function () {
   var trEl = document.createElement ('tr');
   var tdEl = document.createElement ('td');
   trEl.appendChild(tdEl);
-  trEl.textContent = this.nameOfStore;
+  tdEl.textContent = this.nameOfStore;
 
   // create table rows and data cells
   for (var i = 0; i < storeHours.length; i++){
