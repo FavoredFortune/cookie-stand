@@ -50,11 +50,12 @@ StoreCookieSales.prototype.numHourlyCust = function(){
 
 StoreCookieSales.prototype.cookieSalesPH = function() {
   var totalCookieSales = 0;
+  
   for (var i = 0; i < storeHours.length; i ++) {
     if (i < storeHours.length - 1){
       var hourlyCookies = Math.round (this.avgCookies * this.numHourlyCust());
       this.cookieSales.push (hourlyCookies);
-      console.log (storeHours [i], this.cookieSales + ' cookies');
+      console.log (storeHours [i], this.cookieSales[i] + ' cookies');
       totalCookieSales += hourlyCookies;
     }
     else {
@@ -71,6 +72,18 @@ function makeHeaderRow (){
     var thEl = document.createElement('th');
     thEl.textContent = storeHours[i];
     trEl.appendChild(thEl);
+    allStoresTable.appendChild (trEl);
+  }
+}
+
+function makeFooterRow () {
+  var trEl = document.createElement ('tr');
+  var tdEl = document.createElement ('td');
+  trEl.appendChild(tdEl);
+  for (var i = 0; i < storeHours.length; i++){
+    var trEl = document.createElement ('tr');
+    var tdEl = document.createElement ('td');
+    // tdEl.textContent = StoreCookieSales.cookieSalesPH.this.cookieSales[i];
     allStoresTable.appendChild (trEl);
   }
 }
@@ -104,3 +117,4 @@ makeHeaderRow();
 for (var i = 0; i < allStores.length; i++){
   allStores[i].render();
 }
+makeFooterRow();
