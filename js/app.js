@@ -134,7 +134,7 @@ function makeFooterRow(){
     tableRowElement.appendChild(tableHeaderElement);
   }
   // tableDataElement.textContent = StoreCookieSales.cookieSalesPH.this.cookieSales[i];
-  var tableDataElement = document.createElement ('td');
+  var tableDataElement = document.createElement ('th');
   tableDataElement.textContent = dailyTotal;
   tableRowElement.appendChild(tableDataElement);
 
@@ -156,8 +156,9 @@ function addNewStore(event) {
 
   allStoresTable.innerHTML = '';
   makeHeaderRow();
-  renderAllStores ();
-  makeFooterRow ();
+  renderAllStores();
+  makeFooterRow();
+  newStoreForm.reset();
 }
 
 function calcCustNum(min,max){
