@@ -33,6 +33,7 @@ id="alki" */
 var storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 var allStoresTable = document.getElementById('allStores');
+var newStoreForm = document.getElementById ('newStore');
 
 function StoreCookieSales(nameOfStore, minCust, maxCust, avgCookies) {
   this.nameOfStore = nameOfStore;
@@ -46,6 +47,8 @@ function StoreCookieSales(nameOfStore, minCust, maxCust, avgCookies) {
 }
 StoreCookieSales.allStores = [];
 
+
+
 StoreCookieSales.prototype.numCustPerHour = function(){
   //generate a random number
   //track random numbers that I generate
@@ -58,7 +61,7 @@ StoreCookieSales.prototype.numCustPerHour = function(){
 StoreCookieSales.prototype.numCookieSalesPH = function() {
   this.numCustPerHour();
 
-  for (var i = 0; i < storeHours.length; i ++) {
+  for(var i = 0; i < storeHours.length; i ++) {
     //calculate the average customers per hour for each store by the average cookies sold per hour for each store
     //Where does avg cookes come frome? this.avgCookies
     //Where does avg cust per hour come from this.custPerHour
@@ -88,7 +91,7 @@ StoreCookieSales.prototype.render = function() {
     tableDataElement.textContent = this.cookieSalesPH[i];
     tableRowElement.appendChild(tableDataElement);
   }
-  var dailyTotal = document.createElement ('th');
+  var dailyTotal = document.createElement ('td');
   dailyTotal.textContent = this.totalCookiesPD;
   tableRowElement.appendChild(dailyTotal);
   allStoresTable.appendChild(tableRowElement);
@@ -103,14 +106,14 @@ function makeHeaderRow(){
     tableHeaderElement.textContent = storeHours[i];
     tableRowElement.appendChild(tableHeaderElement);
   }
-  var dailyTotal = document.createElement ('th');
+  var dailyTotal = document.createElement ('td');
   dailyTotal.textContent = 'Daily Total';
   tableRowElement.appendChild(dailyTotal);
 
   allStoresTable.appendChild (tableRowElement);
 }
 
-function makeFooterRow () {
+function makeFooterRow(){
   var dailyTotal = 0;
   var tableRowElement = document.createElement ('tr');
   var tableHeaderElement = document.createElement ('th');
@@ -135,24 +138,47 @@ function makeFooterRow () {
   tableDataElement.textContent = dailyTotal;
   tableRowElement.appendChild(tableDataElement);
 
-  allStoresTable.appendChild (tableRowElement);
+  allStoresTable.appendChild(tableRowElement);
 }
 
 // function makeTotalTotalCell(){};
+
+function addNewStore(event) {
+  event.preventDefault();
+  console.log (event.target.nameOfStore.value);
+
+  var newNameOfStore = event.target.nameOfStore.value;
+  var newMinCust = event.target.minCust.value;
+  var newMaxCust = event.target.maxCust.value;
+  var newAvgCookies = event.target.avgCookies.value;
+
+  new StoreCookieSales (newNameOfStore,newMinCust,newMaxCust,newAvgCookies);
+
+  allStoresTable.innerHTML = '';
+  makeHeaderRow();
+  renderAllStores ();
+  makeFooterRow ();
+}
 
 function calcCustNum(min,max){
   return Math.random() * (max - min + 1) + min;
 }
 
+function renderAllStores(){
+  for (var i in StoreCookieSales.allStores){
+    StoreCookieSales.allStores[i].render();
+  }
+}
 new StoreCookieSales('First and Pike ', 23, 65, 6.3);
 new StoreCookieSales('Seatac Airport',3, 24, 1.2);
 new StoreCookieSales('Seattle Center',11, 38, 3.7);
 new StoreCookieSales('Capitol Hill', 20, 38, 2.3);
 new StoreCookieSales('Alki',2, 14, 4.6);
 
+//make event listener
+newStoreForm.addEventListener ('submit', addNewStore);
+
 //Invoke
 makeHeaderRow();
-for (var i in StoreCookieSales.allStores){
-  StoreCookieSales.allStores[i].render();
-}
+renderAllStores ();
 makeFooterRow();

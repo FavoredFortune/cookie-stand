@@ -61,6 +61,35 @@ body {
   font-size: 100%;
   vertical-align: middle;
 }
+fieldset {
+  display: inline;
+}
+legend {
+  font-size: 18px;
+  color: salmon;
+  margin: 15px;
+  padding: 10 px;
+  border: bisque;
+}
+form, label {
+  color: grey;
+  font-family: 'Monteserrat', sans-serif;
+  line-height: 2.5rem;
+}
+
+input{
+  background: whitesmoke;
+  color: slategray;
+}
+
+button{
+  background: coral;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: whitesmoke;
+  padding:24px;
+
+}
 
 table {
   empty-cells: hide;
@@ -113,11 +142,15 @@ ol li {
   font-family: 'Arial', sans-serif;
 }
 
+section.data-disclaimer {
+  font-family: Georgia, serif;
+}
+
 section.footer {
   background-color: gray;
   border: 2px bisque;
   color: white;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Georgia',serif;
   font-size: 10px;
   padding: 10px;
 }
