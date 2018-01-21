@@ -67,14 +67,14 @@ StoreCookieSales.prototype.numCookieSalesPH = function() {
     //Where does avg cust per hour come from this.custPerHour
     //Where do the results for this method need to go? This is  needs to go in to this.cookieSalesPerHour array and this needs to be added together, for each hour for each store to deliver a total per store
     //So, to get a total per store you need to go through the store hours array and find the cookies per hour and store that in an array and calculate the total.
-    var hourlyCookies = Math.round(this.avgCookies * this.custPerHour[i]);
+    var hourlyCookies = Math.floor(this.avgCookies * this.custPerHour[i]);
     this.cookieSalesPH.push(hourlyCookies);
     // console.log (storeHours[i], this.cookieSalesPH[i] + ' cookies');
     this.totalCookiesPD += hourlyCookies;
   }
 };
 
-StoreCookieSales.prototype.render = function() {
+StoreCookieSales.prototype.render = function(){
   this.numCookieSalesPH();
   this.numCustPerHour();
 
