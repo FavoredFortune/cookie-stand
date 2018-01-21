@@ -10,52 +10,54 @@
 </head>
 <html>
     <body>
-        <nav>
-          <img src = "img/salmon.png">
-          <h1 class="center">Pat's Salmon Cookies</h1>
-          <ol>
-            <li class = "nav"><a href="index.html">[HOME]</a></li>
-            <li class = "nav"><a href="sales.html">[SALES - <em>confidential</em>]</a></li>
-          </ol>
-          </ol>
-        </nav>
-        <section class = "form">
-          <form id ="newStore">
-            <fieldset>
-              <legend>Add a new store</legend>
-              <label for="nameOfStore">Store Name:</label>
-              <input name="nameOfStore" type="text">
-              <br>
-              <label for="minCust">Minimum # of Customers:  </label>
-              <input name="minCust" type="number">
-              <br>
-              <label for="maxCust">Maximum # of Customers: </label>
-              <input name="maxCust" type="number">
-              <br>
-              <label for="avgCookies">Average # of Cookies: </label>
-              <input name="avgCookies" type="text">
-              <br>
-              <br>
-              <button id="add-store">Add New Store</button>
+      <nav>
+        <img src = "img/salmon.png">
+        <h1 class="center">Pat's Salmon Cookies</h1>
+        <ol>
+          <li id="link"><a href="index.html">[HOME]</a></li>
+          <li id="link"><a href="about.html">[ABOUT]</a></li>
+          <li id="link"><a href="merchandise.html">[GIFTS]</a></li>
+          <li id="link"><em>Currently on confidential sales data page</em></li>
+        </ol>
+      </nav>
+      <section class = "form">
+        <form id ="newStore">
+          <fieldset>
+            <legend>Add a new store</legend>
+            <label for="nameOfStore">Store Name:</label>
+            <input name="nameOfStore" type="text">
+            <br>
+            <label for="minCust">Minimum # of Customers:  </label>
+            <input name="minCust" type="number">
+            <br>
+            <label for="maxCust">Maximum # of Customers: </label>
+            <input name="maxCust" type="number">
+            <br>
+            <label for="avgCookies">Average # of Cookies: </label>
+            <input name="avgCookies" type="text">
+            <br>
+            <br>
+            <button id="add-store">Add New Store</button>
 
-            </fieldset>
-          </form>
-        </section>
-        <section class= "overview">
-           <h1>Sales Information</h1>
-
-        </section>
-        <section id = "sales">
-          <table id = "allStores" > </table>
-
-        </section>
-        <section id = "data-disclaimer">
-        <p><i>Please note that these are currently random estimates and not based on actual sales data.</i>
-        </p>
+          </fieldset>
+        </form>
       </section>
-        <section class="footer">
-                <p><i>Please note that all content is property of Pat's Salmon Cookies Company, LLC</i></p>
-                <p>&copy; Copyright 2018 </p>
+      <section class= "overview">
+        <h1>Sales Information</h1>
+
+      </section>
+      <section id = "sales">
+        <table id = "allStores" > </table>
+
+      </section>
+      <section id = "data-disclaimer">
+      <p><i>Please note that these are currently random estimates and not based on actual sales data.</i>
+      </p>
+      </section>
+      <section class="footer">
+          <a href="sales.html"> <em>CONFIDENTIAL:</em>Sales Data</a></li>
+          <p><i>Please note that all content is property of Pat's Salmon Cookies Company, LLC</i></p>
+          <p>&copy; Copyright 2018 </p>
         </section>
            <script type ="text/javascript" src="js/app.js"></script>
     </body>
