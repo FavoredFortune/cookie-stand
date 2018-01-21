@@ -47,8 +47,6 @@ function StoreCookieSales(nameOfStore, minCust, maxCust, avgCookies) {
 }
 StoreCookieSales.allStores = [];
 
-
-
 StoreCookieSales.prototype.numCustPerHour = function(){
   //generate a random number
   //track random numbers that I generate

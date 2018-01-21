@@ -3,14 +3,16 @@ nav {
   border: 2px bisque;
   color: white;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 14px;     
+  font-size: 18px;     
 }
 
-nav.li {
+nav ol li {
   margin: 14px;
   padding: 14px;
   text-align: center;
   display: inline;
+  color: white;
+  font-size: 20px;
 }
 
 section {
