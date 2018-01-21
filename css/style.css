@@ -21,6 +21,9 @@ a{
   hover: grey;
 }
 
+.health ol {
+  display: inline;
+}
 section {
   line-height: 1;
 

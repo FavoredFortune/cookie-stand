@@ -58,6 +58,7 @@ StoreCookieSales.prototype.numCustPerHour = function(){
 
 StoreCookieSales.prototype.numCookieSalesPH = function() {
   this.numCustPerHour();
+  this.totalCookiesPD = 0;
 
   for(var i = 0; i < storeHours.length; i ++) {
     //calculate the average customers per hour for each store by the average cookies sold per hour for each store
