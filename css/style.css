@@ -20,7 +20,9 @@ a{
   visited: coral;
   hover: grey;
 }
-
+#email{
+  color: slategray;
+}
 .health ol {
   display: inline;
 }
@@ -58,6 +60,10 @@ h3 {
 
 .nav {
   display: inline;
+}
+.family{
+  align-content: center;
+  float: left;
 }
   
 body {
