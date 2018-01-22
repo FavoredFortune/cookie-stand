@@ -26,9 +26,8 @@ a{
 .health ol {
   display: inline;
 }
-section {
-  line-height: 1;
-
+#overview {
+  line-height: 1rem;
 }
 img {
   width: 150px;
@@ -140,8 +139,14 @@ th {
   margin: 5px;
   /* empty-cells: hide; */
 }
+.merchandise ul li{
+  margin: 14px;
+  display: inline-block;
+  font-size: 16px;
+
+}
 ul li {
-  font-size: .5rem;
+  font-size: 14px;
   line-height: 1.5;
   list-style-type: square;
   text-indent: 8px;
